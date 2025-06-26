@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desa Pulosari - Karawang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Navbar Styles */
+        .navbar-custom {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(97, 130, 100, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .nav-link {
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #A4BE7B !important;
+            border-bottom: #A4BE7B solid 2px;
+            padding-bottom: 1px;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .dropdown-item {
+            transition: 0s;
+        }
+
+        .dropdown-item:hover {
+            font-weight: bold;
+            color: #A4BE7B !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #618264;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-image: url('assets/index_background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 632px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            font-weight: bolder;
+            font-style: caprasimo;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .berita {
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .intro-text {
+            padding: 20px;
+            width: 700px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .intro-image img {
+            width: 390px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .visi-misi {
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #4E6B50;
+        }
+
+        .visi, .misi {
+            padding: 20px;
+            width: 400px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            background-color: #4E6B50;
+            border-radius: 8%;
+        }
+
+        .demografi {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .demografi-image img {
+            width: 390px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .demografi-text {
+            padding: 20px;
+            width: 700px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .demografi-text h2 {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .berita{
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+        
+        .btn {
+            background-color: #A4BE7B;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3E4D47;
+            color: #FFD966;
+            transform: scale(1.05);
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            color: #3E4D47;
+        }
+
+        /* Footer Styles */
+        .footer-bg-color {
+            background-color: #222831;
+        }
+
+        .hover {
+            transition: 0.3s;
+        }
+
+        .hover:hover {
+            font-size: larger;
+        }
+
+        @media (max-width: 768px) {
+            .intro-container, .demografi {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-text, .demografi-text {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .intro-image img, .demografi-image img {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .visi-misi {
+                flex-direction: column;
+            }
+
+            .visi, .misi {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold pt-2" href="#">
+                <img src="assets/logo-desa.png" alt="Logo Kabupaten Karawang" width="30" class="d-inline-block align-text-top me-2">
+                Desa Pulosari
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDesa" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarDesa">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white pt-0" aria-current="page" href="#">Beranda</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white pt-0" href="#" role="button" data-bs-toggle="dropdown">
+                            Profil Desa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">Informasi Dasar</h6></li>
+                            <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                            <li><a class="dropdown-item" href="#">Peta Desa</a></li>
+
+                            <li><h6 class="dropdown-header">Struktur Desa</h6></li>
+                            <li><a class="dropdown-item" href="#">Perangkat Desa</a></li>
+                            <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+
+                            <li><h6 class="dropdown-header">Potensi Desa</h6></li>
+                            <li><a class="dropdown-item" href="#">Potensi Alam</a></li>
+                            <li><a class="dropdown-item" href="#">Produk Desa</a></li>
+                            <li><a class="dropdown-item" href="#">Fasilitas Umum</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white pt-0" href="#" role="button" data-bs-toggle="dropdown">
+                            Informasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Berita Desa</a></li>
+                            <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+                            <li><a class="dropdown-item" href="#">Agenda Kegiatan</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Data Statistik</a></li>
+                            <li><a class="dropdown-item" href="#">Galeri Desa</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white pt-0" href="#">Layanan Publik</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white pt-0" href="#">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Website Desa Pulosari</h1>
+            <p>Temukan informasi terkini tentang desa kami, layanan publik, dan berita terbaru.</p>
+            <a href="#" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <!-- Tentang Desa -->
+    <div class="intro-container">
+        <div class="intro-text">
+            <h2 style="font-weight: bold;"><u>Tentang Desa Pulosari</u></h2>
+            <p>Desa Pulosari merupakan salah satu desa yang terletak di Kecamatan Talagasari, Kabupaten Karawang, Provinsi Jawa Barat. Desa ini dikenal dengan suasana pedesaan yang asri, lingkungan yang ramah, serta masyarakat yang menjunjung tinggi nilai gotong royong dan kearifan lokal.</p>
+            <p>Sebagai bagian dari Kabupaten Karawang, Desa Pulosari memiliki potensi di bidang pertanian, peternakan, dan kerajinan tangan yang menjadi sumber penghidupan sebagian besar warganya. Selain itu, desa ini juga aktif dalam menjaga tradisi dan budaya setempat yang menjadi warisan turun-temurun.</p>
+            <p>Pemerintah Desa Pulosari berkomitmen untuk memberikan pelayanan terbaik kepada masyarakat, meningkatkan kualitas hidup warga, serta membangun desa yang transparan, modern, dan berdaya saing. Melalui website ini, Desa Pulosari ingin memberikan informasi yang mudah diakses dan selalu terupdate bagi seluruh warga desa maupun pengunjung dari luar.</p>
+            <p>Dengan adanya website ini, diharapkan masyarakat dapat lebih mudah mendapatkan informasi terkait layanan publik, berita desa, dan berbagai kegiatan yang ada di Desa Pulosari. Kami juga mengajak seluruh warga untuk berpartisipasi aktif dalam pembangunan desa demi kemajuan bersama.</p>
+            <p>Untuk informasi lebih lanjut, silakan kunjungi halaman <a href="#">Profil Desa</a> atau <a href="#">Layanan Publik</a>.</p>
+        </div>
+
+        <div class="intro-image">
+            <img src="assets/logo-desa.png" alt="Logo Desa Pulosari">
+        </div>
+    </div>
+
+    <!-- Visi Misi -->
+    <div class="visi-misi">
+        <div class="visi">
+            <h2 style="font-weight: bold; text-align: center;">Visi</h2>
+            <p>Visi kami adalah menciptakan Desa Pulosari yang mandiri, sejahtera, dan berbudaya. Misi kami meliputi peningkatan kualitas layanan publik, pengembangan potensi lokal, serta pelestarian budaya dan lingkungan.</p>
+        </div>
+        
+        <div class="misi">
+            <h2 style="font-weight: bold; text-align: center;">Misi</h2>
+            <p>Misi kami adalah meningkatkan partisipasi masyarakat dalam pembangunan desa, menyediakan layanan publik yang transparan dan akuntabel, serta memajukan ekonomi lokal melalui pemberdayaan masyarakat dan pengembangan potensi desa.</p>
+        </div>
+    </div>         
+    
+    <!-- Demografi -->
+    <div class="demografi">
+        <div class="demografi-image">
+            <img src="assets/satelit.png" alt="Demografi Desa Pulosari">
+        </div>
+
+        <div class="demografi-text">
+            <h2 style="font-weight: bold;"><u>Demografi Desa Pulosari</u></h2>
+            <p>Desa Pulosari merupakan salah satu desa di Kecamatan Talagasari, Kabupaten Karawang dengan luas wilayah kurang lebih 245 hektar. Desa ini terbagi menjadi 3 dusun, 6 Rukun Warga (RW), dan 20 Rukun Tetangga (RT).</p>
+            <p>Berdasarkan data terbaru, jumlah penduduk Desa Pulosari mencapai sekitar 3.000 jiwa yang terdiri dari 1.500 laki-laki dan 1.500 perempuan. Sebagian besar masyarakat berprofesi sebagai petani, peternak, pedagang kecil, dan sebagian lainnya bekerja di sektor informal.</p>
+            <p>Selain memiliki potensi besar di bidang pertanian, desa ini juga dikenal dengan keindahan sawah terasering yang asri, serta lingkungan yang masih hijau dan alami. Hal ini menjadi potensi pengembangan ekowisata dan wisata edukasi di masa mendatang.</p>
+            <p>Dengan komposisi usia yang didominasi oleh usia produktif, Desa Pulosari memiliki sumber daya manusia yang potensial untuk mendukung pembangunan desa secara berkelanjutan.</p>
+        </div>
+    </div>
+
+    <!-- Berita -->
+    <div class="berita">
+        <div class="berita-text">
+            <h2 style="font-weight: bold;"><u>Berita Desa Pulosari</u></h2>
+            <p>Berita terbaru akan ditampilkan di sini. Pastikan untuk selalu mengunjungi website kami untuk mendapatkan informasi terkini tentang Desa Pulosari.</p>
+            <a href="#" class="btn btn-secondary">Lihat Berita Lainnya</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-bg-color text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-bold">Desa Pulosari</h5>
+                    <p>Dari Pulosari, kami membangun harapan, menjaga tradisi, dan melangkah bersama menuju masa depan yang lebih baik.</p>
+                    <li class="list-unstyled">
+                        <img src="assets/WA.png" style="width: 26px; height: 26px; margin-bottom: 6px; margin-right: 7px;">
+                        <a href="#" class="text-white text-decoration-none">WhatsApp : @anjingang</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <img src="assets/mail.png" style="width: 26px; height: 26px; margin-bottom: 6px; margin-right: 7px;">
+                        <a href="#" class="text-white text-decoration-none">Email : @teteolok</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <img src="assets/map.png" style="width: 26px; height: 26px; margin-bottom: 6px; margin-right: 7px;">
+                        <a href="#" class="text-white text-decoration-none">Desa Pulosari, Telagasari, Karawang</a>
+                    </li>
+                </div>
+
+                <div class="col-md-2 mb-3">
+                    <h5 class="fw-bold">Media Sosial</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="assets/face.png" style="width: 24px; height: 24px; margin-right: 7px; margin-bottom: 7px;">
+                            <a href="#" class="text-white text-decoration-none">@anjinggila</a>
+                        </li>
+                        <li>
+                            <img src="assets/instagram.png" style="width: 26px; height: 26px; margin-right: 7px; margin-bottom: 7px;">
+                            <a href="#" class="text-white text-decoration-none">@anjingLapar</a>
+                        </li>
+                        <li>
+                            <img src="assets/youtube.png" style="width: 26px; height: 26px; margin-right: 7px; margin-bottom: 7px;">
+                            <a href="#" class="text-white text-decoration-none">@anjingmaling</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 mb-3">
+                    <h5 class="fw-bold">Tautan Cepat</h5>
+                    <a href="#" class="text-white text-decoration-none d-block hover">Beranda</a>
+                    <a href="#" class="text-white text-decoration-none d-block hover">Profil Desa</a>
+                    <a href="#" class="text-white text-decoration-none d-block hover">Layanan Publik</a>
+                </div>
+
+                <div class="col-md-5 mb-3">
+                    <h5 class="fw-bold">Lokasi Kami</h5>
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30158.649425900825!2d107.4273153403134!3d-6.254644648956272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e697aec5b1f89d5%3A0x5176d09b0d6ccea1!2sPulosari%2C%20Kec.%20Talagasari%2C%20Karawang%2C%20Jawa%20Barat!5e1!3m2!1sid!2sid!4v1750020251642!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-3 pb-2 border-top mt-3">
+                <p class="mb-0">Kirik-Kirikan Ayam geprek srikandi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
