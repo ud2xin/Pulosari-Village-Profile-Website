@@ -29,7 +29,7 @@
             background-image: url('assets/index_background.png');
             background-size: cover;
             background-position: center;
-            height: 69vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,6 +65,13 @@
 
         .intro-image img {
             width: 400px;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .intro-image img:hover {
+            transform: scale(1.05);
+
         }
 
         .berita{
@@ -113,8 +120,8 @@
         }
 
         .btn:hover {
-            background-color: #3E4D47;
-            color: #FFD966;
+            background-color: #FFD966;
+            color: #184f28;
             transform: scale(1.05);
             font-weight: bold;
         }
@@ -124,7 +131,7 @@
 <body>
     <nav class="hero">
         <nav class="hero-text">
-            <h1 style="font-weight: strong;"><u>Selamat Datang di Desa Pulosari</u></h1>
+            <h1 style="font-weight: strong;">Selamat Datang di Desa Pulosari</h1>
             <p>Temukan informasi terkini tentang desa kami, layanan publik, dan berita terbaru.</p>
             <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
         </nav>
@@ -195,7 +202,6 @@
                         <img src="assets/galeri1.jpeg" class="card-img-top" alt="Pembangunan Jalan Baru">
                         <div class="card-body">
                             <h5 class="card-title">Jum'at Bersih Desa Pulosari</h5>
-                            <a href="berita.html" class="btn btn-success">Lihat Lebih Banyak</a>
                         </div>
                     </div>
                 </div>
@@ -205,7 +211,6 @@
                         <img src="assets/galeri2.jpg" class="card-img-top" alt="Program Jumat Bersih">
                         <div class="card-body">
                             <h5 class="card-title">Kegiatan di Kantor Desa Pulosari</h5>
-                            <a href="berita.html" class="btn btn-success">Lihat Lebih Banyak</a>
                         </div>
                     </div>
                 </div>
@@ -215,14 +220,13 @@
                         <img src="assets/galeri3.jpeg" class="card-img-top" alt="Panen Raya">
                         <div class="card-body">
                             <h5 class="card-title">Persawahan Desa Pulosari</h5>
-                            <a href="berita.html" class="btn btn-success">Lihat Lebih Banyak</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <nav class="btn-galeri text-center my-4">
-        <a href="galeri.html" class="btn btn-succes">Selengkapnya</a>
+        <a href="galeri.html" class="btn btn-success">Selengkapnya</a>
         </nav>
     </nav>
 </body>
