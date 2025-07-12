@@ -41,6 +41,7 @@
             align-items: center;
             justify-content: center;
             color: white;
+            min-height: 300px;
         }
 
         .hero-text h1, .hero-text p{
@@ -51,6 +52,7 @@
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
         }
 
         .section-title {
@@ -84,6 +86,7 @@
         .timeline-item img {
             width: 300px;
             border-radius: 15px;
+            flex-shrink: 0;
         }
 
         .timeline-item p {
@@ -106,6 +109,149 @@
             background-color: #FFD966;
             color: #184f28;
             transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .timeline {
+                padding: 0 5%;
+            }
+            
+            .timeline-item img {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                height: 40vh;
+                background-attachment: scroll;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline-item {
+                gap: 20px;
+            }
+            
+            .timeline-item img {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 35vh;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .background-wrapper {
+                padding: 30px 0;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+            
+            .timeline {
+                padding: 0 2%;
+                gap: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                text-align: center;
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .timeline-item img {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .timeline-item p {
+                text-align: center;
+            }
+            
+            .highlight {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 30vh;
+                min-height: 250px;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-text p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .background-wrapper {
+                padding: 20px 0;
+            }
+            
+            .timeline {
+                gap: 20px;
+            }
+            
+            .timeline-item {
+                padding: 10px;
+                margin: 0 10px;
+            }
+            
+            .timeline-item img {
+                max-width: 250px;
+            }
+            
+            .highlight {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-text h1 {
+                font-size: 1.25rem;
+            }
+            
+            .hero-text p {
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.25rem;
+            }
+            
+            .timeline-item {
+                margin: 0 5px;
+            }
+            
+            .timeline-item img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>

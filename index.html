@@ -13,7 +13,6 @@
         /* Untuk judul */
         .hero h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
-
         }
 
         /* Untuk isi teks */
@@ -41,12 +40,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;            
+            color: white;
+            padding: 20px;
         }
         
         .hero-text {
             text-align: center;
             color: white;
+            max-width: 800px;
         }
         
         .hero-text h1, .hero-text p{
@@ -57,10 +58,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding: 50px 100px;
+            gap: 40px;
         }
 
         .intro-text h2 {
@@ -72,6 +71,11 @@
         .intro-text {
             max-width: 600px;
             text-align: justify;
+            flex: 1;
+        }
+
+        .intro-image {
+            flex: 0 0 auto;
         }
 
         .intro-image img {
@@ -95,10 +99,7 @@
         }
 
         .berita{
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding: 50px 100px;
         }
 
         .berita h2{
@@ -108,10 +109,7 @@
         }
 
         .galeri{
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding: 50px 100px;
         }
 
         .galeri h2{
@@ -121,8 +119,8 @@
         }
 
         .card-img-top {
-            height: 200px; /* Kamu bisa sesuaikan angkanya */
-            object-fit: cover; /* Biar gambar tetap proporsional dan tidak gepeng */
+            height: 200px;
+            object-fit: cover;
         }
 
         .btn {
@@ -136,7 +134,6 @@
             font-weight: bold;
             transition: 0.3s ease;
             margin: 0 10px;
-            font-weight: bold;
         }
 
         .btn:hover {
@@ -145,79 +142,236 @@
             transform: scale(1.05);
             font-weight: bold;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+                padding: 20px;
+                background-attachment: scroll;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .intro {
+                flex-direction: column;
+                padding: 30px 20px;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .intro-text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .intro-text h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .intro-image img {
+                width: 250px;
+                max-width: 100%;
+            }
+
+            .berita {
+                padding: 30px 20px;
+            }
+
+            .berita h2 {
+                font-size: 1.5rem;
+            }
+
+            .galeri {
+                padding: 30px 20px;
+            }
+
+            .galeri h2 {
+                font-size: 1.5rem;
+            }
+
+            .card-img-top {
+                height: 180px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                margin: 5px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Extra Small Mobile Devices */
+        @media (max-width: 480px) {
+            .hero {
+                height: 60vh;
+                padding: 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-text p {
+                font-size: 0.9rem;
+            }
+
+            .intro {
+                padding: 20px 15px;
+            }
+
+            .intro-text h2 {
+                font-size: 1.3rem;
+            }
+
+            .intro-text p {
+                font-size: 0.9rem;
+            }
+
+            .intro-image img {
+                width: 200px;
+            }
+
+            .berita {
+                padding: 20px 15px;
+            }
+
+            .galeri {
+                padding: 20px 15px;
+            }
+
+            .berita h2, .galeri h2 {
+                font-size: 1.3rem;
+            }
+
+            .card-img-top {
+                height: 150px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (max-width: 992px) and (min-width: 769px) {
+            .intro {
+                padding: 40px 50px;
+            }
+
+            .intro-image img {
+                width: 300px;
+            }
+
+            .berita {
+                padding: 40px 50px;
+            }
+
+            .galeri {
+                padding: 40px 50px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="hero">
-        <nav class="hero-text">
+    <section class="hero">
+        <div class="hero-text">
             <h1 style="font-weight: strong;">Selamat Datang di Desa Pulosari</h1>
             <p>Temukan informasi terkini tentang desa kami, layanan publik, dan berita terbaru.</p>
             <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
-        </nav>
-    </nav>
+        </div>
+    </section>
 
-    <nav class="intro">
-        <nav class="intro-text">
+    <section class="intro">
+        <div class="intro-text">
             <h2 style="font-weight: strong;"><u>Tentang Desa Pulosari</u></h2>
             <p>Desa Pulosari merupakan salah satu desa yang terletak di Kecamatan Telagasari, Kabupaten Karawang, Jawa Barat. Desa ini dikenal dengan lingkungan yang asri, masyarakat yang ramah, serta potensi pertanian yang melimpah. Berbagai fasilitas umum seperti balai desa, sekolah, masjid, dan pasar tradisional tersedia untuk mendukung aktivitas dan kebutuhan sehari-hari warga. Saat ini, Desa Pulosari terus berkembang menuju desa yang mandiri dan sejahtera melalui berbagai program pembangunan dan pemberdayaan masyarakat yang berkelanjutan.</p>
-        </nav>
-        <nav class="intro-image">
-            <img src="assets/logo-desa2-bgremove-Photoroom.jpg" alt="Logo Desa Pulosari" width="100" class="d-inline-block align-text-top me-2">
-        </nav>
-    </nav>
+        </div>
+        <div class="intro-image">
+            <img src="assets/logo-desa2-bgremove-Photoroom.jpg" alt="Logo Desa Pulosari" class="img-fluid">
+        </div>
+    </section>
 
-    <nav class="berita">
-        <nav class="berita-text">
+    <section class="berita">
+        <div class="berita-text">
             <h2 style="font-weight: strong;"><u>Berita Terkini</u></h2>
-        </nav>
-        <section id="berita-card" class="container my-5">
+        </div>
+        <div class="container-fluid">
             <div class="row">
                 <!-- Berita 1 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/berita1.jpg" class="card-img-top" alt="Kepala Desa Baru Pulosari">
                         <div class="card-body">
                             <h5 class="card-title">Kepala Desa Terpilih Baru di Desa Pulosari</h5>
+                            <p class="text-muted mb-2">Dipublikasikan: 5 Juli 2025</p>
                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto asperiores explicabo nam fugit tempora. Voluptas architecto nisi quibusdam consequatur voluptate. At laboriosam fugiat explicabo error reprehenderit optio id illo est.</p>
                             <a href="berita.html" class="btn btn-success">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Berita 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/berita2.jpg" class="card-img-top" alt="Masuk Hai Desa">
                         <div class="card-body">
                             <h5 class="card-title">Wujud Abdurrahman Setelah Masuk Hai Desa</h5>
+                            <p class="text-muted mb-2">Dipublikasikan: 2 Juli 2025</p>
                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto asperiores explicabo nam fugit tempora. Voluptas architecto nisi quibusdam consequatur voluptate. At laboriosam fugiat explicabo error reprehenderit optio id illo est.</p>
                             <a href="berita.html" class="btn btn-success">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Berita 3 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/berita3.jpg" class="card-img-top" alt="Programmer Malas Ngoding">
                         <div class="card-body">
                             <h5 class="card-title">VIRAL!!! PROGRAMMER MALAS NGODING</h5>
+                            <p class="text-muted mb-2">Dipublikasikan: 29 Juni 2025</p>
                             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto asperiores explicabo nam fugit tempora. Voluptas architecto nisi quibusdam consequatur voluptate. At laboriosam fugiat explicabo error reprehenderit optio id illo est.</p>
                             <a href="berita.html" class="btn btn-success">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </nav>
 
-    <nav class="galeri">
-        <nav class="galeri-text">
+            </div>
+        </div>
+    </section>
+
+    <section class="galeri">
+        <div class="galeri-text">
             <h2 style="font-weight: strong;"><u>Galeri Desa</u></h2>
-        </nav>
-        <section id="galeri-card" class="container my-5">
+        </div>
+        <div class="container-fluid">
             <div class="row">
                 <!-- Galeri 1 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/galeri1.jpeg" class="card-img-top" alt="Pembangunan Jalan Baru">
                         <div class="card-body">
@@ -226,7 +380,7 @@
                     </div>
                 </div>
                 <!-- Galeri 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/galeri2.jpg" class="card-img-top" alt="Program Jumat Bersih">
                         <div class="card-body">
@@ -235,7 +389,7 @@
                     </div>
                 </div>
                 <!-- Galeri 3 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img src="assets/galeri3.jpeg" class="card-img-top" alt="Panen Raya">
                         <div class="card-body">
@@ -244,11 +398,11 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <nav class="btn-galeri text-center my-4">
-        <a href="galeri.html" class="btn btn-success">Selengkapnya</a>
-        </nav>
-    </nav>
+        </div>
+        <div class="text-center my-4">
+            <a href="galeri.html" class="btn btn-success">Selengkapnya</a>
+        </div>
+    </section>
 </body>
 
 </html>

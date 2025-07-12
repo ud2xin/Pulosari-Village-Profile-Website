@@ -27,10 +27,6 @@
             background-repeat: no-repeat;
         }
 
-        /* body {
-            background-color: #f8f9fa;
-        } */
-
         .hero{
             background-image: url('assets/celurit.jpg');
             background-size: cover;
@@ -41,7 +37,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            
+            min-height: 300px;
         }
 
         .hero-text h1, .hero-text p{
@@ -52,6 +48,7 @@
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            padding: 0 20px;
         }
 
         .visi-misi{
@@ -96,6 +93,278 @@
 
         .misi-image img:hover{
             transform: scale(1.05);
+        }
+
+        .misi-section {
+            padding: 3rem !important;
+        }
+
+        .misi-accordion {
+            width: 60%;
+        }
+
+        .misi-image img {
+            width: 400px;
+            border-radius: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .visi-misi {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            
+            .visi-text {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            
+            .misi-text ol {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            
+            .misi-image img {
+                width: 350px;
+            }
+            
+            .misi-section {
+                padding: 2rem !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                height: 40vh;
+                background-attachment: scroll;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .visi-misi {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            
+            .visi-text {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            
+            .misi-text ol {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            
+            .misi-section {
+                flex-direction: column !important;
+                text-align: center;
+                padding: 1.5rem !important;
+            }
+            
+            .misi-accordion {
+                width: 100% !important;
+                margin-top: 2rem;
+            }
+            
+            .misi-image {
+                margin-bottom: 1rem;
+            }
+            
+            .misi-image img {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 35vh;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .visi-misi {
+                padding: 30px 20px;
+            }
+            
+            .visi-text {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .visi-text h2 {
+                font-size: 1.75rem;
+                margin-bottom: 30px;
+            }
+            
+            .misi-text ol {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .misi-section {
+                padding: 1rem !important;
+            }
+            
+            .misi-image img {
+                width: 250px;
+            }
+            
+            .accordion-button {
+                font-size: 0.95rem;
+                padding: 0.75rem 1rem;
+            }
+            
+            .accordion-body {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 30vh;
+                min-height: 250px;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .visi-misi {
+                padding: 20px 15px;
+            }
+            
+            .visi-text {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .visi-text h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .visi-text p {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+            
+            .misi-text ol {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .misi-section {
+                padding: 0.5rem !important;
+            }
+            
+            .misi-image img {
+                width: 200px;
+            }
+            
+            .misi-accordion h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .accordion-button {
+                font-size: 0.9rem;
+                padding: 0.6rem 0.8rem;
+            }
+            
+            .accordion-body {
+                font-size: 0.85rem;
+                padding: 0.8rem;
+            }
+            
+            hr {
+                width: 90% !important;
+                margin: 30px auto !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.25rem;
+            }
+            
+            .hero p {
+                font-size: 0.8rem;
+            }
+            
+            .visi-misi {
+                padding: 15px 10px;
+            }
+            
+            .visi-text {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            .visi-text h2 {
+                font-size: 1.25rem;
+            }
+            
+            .visi-text p {
+                font-size: 0.9rem;
+            }
+            
+            .misi-text ol {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            .misi-image img {
+                width: 180px;
+            }
+            
+            .misi-accordion h2 {
+                font-size: 1.25rem;
+            }
+            
+            .accordion-button {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.7rem;
+            }
+            
+            .accordion-body {
+                font-size: 0.8rem;
+                padding: 0.7rem;
+            }
+        }
+
+        /* Landscape orientation adjustments for mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                height: 60vh;
+            }
+            
+            .misi-image img {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 576px) and (orientation: landscape) {
+            .hero {
+                height: 80vh;
+            }
+            
+            .misi-image img {
+                width: 150px;
+            }
         }
     </style>
 </head>

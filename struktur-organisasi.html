@@ -35,6 +35,12 @@
       color: white;
       text-align: center;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      min-height: 300px;
+    }
+
+    .hero-text {
+      padding: 0 20px;
+      max-width: 800px;
     }
 
     .struktur-organisasi {
@@ -52,7 +58,6 @@
       max-width: 100%;
       height: auto;
       padding: 0px 100px;
-      /* margin: 0 auto 30px auto; */
       margin-bottom: 0;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -76,19 +81,172 @@
     }
 
     .struktur-organisasi-text-wrapper {
-      background-color: rgba(255, 255, 255, 0.8); /* putih semi-transparan */
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 50px 100px;
       border-radius: 30px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      /* margin-top: ; */
       transition: transform 0.5s ease;
     }
 
-    /* .struktur-organisasi-text-wrapper:hover{
-      transform: scale(1.05);
-      background-color: #e0e0e0;
-    } */
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .struktur-organisasi {
+        padding: 40px 60px;
+      }
+      
+      .struktur-organisasi-image img {
+        padding: 0px 60px;
+      }
+      
+      .struktur-organisasi-text-wrapper {
+        padding: 40px 60px;
+      }
+    }
 
+    @media (max-width: 992px) {
+      .hero {
+        height: 40vh;
+        background-attachment: scroll;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .struktur-organisasi {
+        padding: 30px 40px;
+      }
+      
+      .struktur-organisasi-image img {
+        padding: 0px 40px;
+      }
+      
+      .struktur-organisasi-text-wrapper {
+        padding: 30px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 35vh;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .struktur-organisasi {
+        padding: 20px 20px;
+      }
+      
+      .struktur-organisasi h2 {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+      }
+      
+      .struktur-organisasi-image img {
+        padding: 0px 20px;
+      }
+      
+      .struktur-organisasi-text-wrapper {
+        padding: 20px 20px;
+        border-radius: 20px;
+      }
+      
+      .struktur-organisasi-text {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        height: 30vh;
+        min-height: 250px;
+      }
+      
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      
+      .hero p {
+        font-size: 0.9rem;
+      }
+      
+      .struktur-organisasi {
+        padding: 15px 10px;
+      }
+      
+      .struktur-organisasi h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .struktur-organisasi-image img {
+        padding: 0px 10px;
+      }
+      
+      .struktur-organisasi-text-wrapper {
+        padding: 15px 15px;
+        border-radius: 15px;
+      }
+      
+      .struktur-organisasi-text ul {
+        padding-left: 1.2rem;
+      }
+      
+      .struktur-organisasi-text li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 1.25rem;
+      }
+      
+      .hero p {
+        font-size: 0.8rem;
+      }
+      
+      .struktur-organisasi h2 {
+        font-size: 1.25rem;
+      }
+      
+      .struktur-organisasi-image img {
+        padding: 0px 5px;
+      }
+      
+      .struktur-organisasi-text-wrapper {
+        padding: 10px 10px;
+        border-radius: 10px;
+      }
+      
+      .struktur-organisasi-text {
+        font-size: 0.9rem;
+      }
+      
+      .struktur-organisasi-text li {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Landscape orientation adjustments for mobile */
+    @media (max-width: 768px) and (orientation: landscape) {
+      .hero {
+        height: 60vh;
+      }
+    }
+
+    @media (max-width: 576px) and (orientation: landscape) {
+      .hero {
+        height: 80vh;
+      }
+    }
   </style>
 </head>
 
